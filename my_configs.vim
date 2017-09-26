@@ -46,3 +46,13 @@ map <leader>g :Ack
 " Toggle paste mode on and off:
 map <leader>pp :setlocal paste!<cr>
 
+" base16 color scheme configuration
+colorscheme base16-default-dark
+
+let NERDTreeMapOpenInTab='<ENTER>'
+
+"Set line numbers to be visible
+set number
+
+" Set relative number
+set rnu
