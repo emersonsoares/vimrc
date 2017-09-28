@@ -46,7 +46,6 @@ map <leader>g :Ack
 " Toggle paste mode on and off:
 map <leader>pp :setlocal paste!<cr>
 
-" base16 color scheme configuration
 colorscheme base16-default-dark
 
 let NERDTreeMapOpenInTab='<ENTER>'
@@ -56,3 +55,29 @@ set number
 
 " Set relative number
 set rnu
+
+" Turn filetypes plugin on
+filetype plugin on
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_debug=0
+
+let g:syntastic_javascript_checkers = ['eslint']
+nnoremap <leader>cd :cd %:p:h<CR>
+
+" Indent settings
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
